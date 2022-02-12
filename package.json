@@ -1,0 +1,7 @@
+{
+  "name": "yr-svg-modifier",
+  "version": "0.0.1",
+  "dependencies": {
+  	"jsdom": "19.0.0"
+  }
+}
