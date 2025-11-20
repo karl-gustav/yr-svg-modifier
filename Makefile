@@ -15,5 +15,5 @@ deploy: push
 		-q\
 		--region europe-west1\
 		--platform managed\
-		--memory 128Mi\
+		--memory 256Mi\
 		--image $(CONTAINER_NAME)
