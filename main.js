@@ -18,7 +18,11 @@ function handler(req, res) {
 		res.end();
 		return;
 	}
-	fetch(`https://www.yr.no/nb/innhold/${reqURL.pathname.substring(1)}/meteogram.svg`)
+
+	const id = reqURL.pathname.substring(1);
+	const query = reqURL.search || '';
+
+	fetch(`https://www.yr.no/nb/innhold/${id}/meteogram.svg${query}`)
 		.then(content => {
 			res.writeHead(200, {
 				'Content-type':'image/svg+xml; charset=utf-8',
